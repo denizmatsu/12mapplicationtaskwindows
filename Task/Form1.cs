@@ -171,13 +171,6 @@ namespace Task
                 e.Info.Caption = "New Miktar";
             }
         }
-
-        //private void PrintGridControl(GridControl gridControl)
-        //{
-        //    PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem());
-        //    link.Component = gridControl;
-        //    link.PrintDlg();
-        //}
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem());
