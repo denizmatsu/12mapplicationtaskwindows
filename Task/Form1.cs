@@ -14,7 +14,9 @@ using DevExpress.XtraPrinting;
 using DevExpress.XtraGrid.Export;
 using System.IO;
 using System.Diagnostics;
-
+using DevExpress.XtraPrinting;
+using DevExpress.XtraGrid;
+using DevExpress.XtraPrinting.Preview;
 namespace Task
 {
     public partial class Form1 : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
@@ -169,5 +171,21 @@ namespace Task
                 e.Info.Caption = "New Miktar";
             }
         }
+
+        //private void PrintGridControl(GridControl gridControl)
+        //{
+        //    PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem());
+        //    link.Component = gridControl;
+        //    link.PrintDlg();
+        //}
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem());
+            link.Component = gridControl1;
+            link.CreateDocument();
+            link.ShowPreview();
+        }
     }
+
+
 }
